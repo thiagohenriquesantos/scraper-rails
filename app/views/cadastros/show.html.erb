@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @cadastro.nome %>
+</p>
+
+<p>
+  <strong>Endereço web Twitter:</strong>
+  <%= @cadastro.url_twitter %>
+</p>
+
+<%= link_to 'Editar', edit_cadastro_path(@cadastro) %> |
+<%= link_to 'Voltar', cadastros_path %>

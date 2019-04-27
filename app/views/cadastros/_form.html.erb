@@ -1,0 +1,28 @@
+<%= form_with(model: cadastro, local: true) do |form| %>
+  <% if cadastro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cadastro.errors.count, "error") %> prohibited this cadastro from being saved:</h2>
+
+      <ul>
+      <% cadastro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url_twitter %>
+    <%= form.text_field :url_twitter %>
+  </div>
+    <button name="bitly" class="btn">Encurtar link</button>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
