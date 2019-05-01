@@ -1,5 +1,17 @@
-<h1>Novo Cadastro</h1>
-
-<%= render 'form', cadastro: @cadastro %>
-
-<%= link_to 'Voltar', cadastros_path %>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <div class="form-post">
+        <h1>Novo Cadastro</h1>
+          <div class="row">
+            <div class="col-xs-6">
+              <%= render 'form', cadastro: @cadastro %>
+                </div>
+          <div class="col-xs-6">
+              <%= link_to 'Voltar', cadastros_path %>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>

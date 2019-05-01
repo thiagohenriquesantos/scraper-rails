@@ -5,11 +5,15 @@ class CadastrosController < ApplicationController
   # GET /cadastros.json
   def index
     @cadastros = Cadastro.all
+    if params[:query].present?
+      @cadastros = @cadastros.where(url_twitter: params[:query])
+    end
   end
 
   # GET /cadastros/1
   # GET /cadastros/1.json
   def show
+
   end
 
   # GET /cadastros/new

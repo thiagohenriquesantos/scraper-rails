@@ -7,6 +7,7 @@
     <tr>
       <th>Nome</th>
       <th>Endereço web Twitter:</th>
+      <th>Informações do twitter:</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,11 @@
       <tr>
         <td><%= cadastro.nome %></td>
         <td><%= cadastro.url_twitter %></td>
+        <td style="width:300px">
+          <b>Título:</b> <%= cadastro.twitter_title %><br>
+          <b>Nome de usuário do Twitter:</b> <%= cadastro.twitter_user %><br>
+          <b>Descrição:</b> <%= cadastro.twitter_description %><br>
+        </td>
         <td><%= link_to 'Show', cadastro %></td>
         <td><%= link_to 'Edit', edit_cadastro_path(cadastro) %></td>
         <td><%= link_to 'Destroy', cadastro, method: :delete, data: { confirm: 'Are you sure?' } %></td>

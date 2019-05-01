@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="Joinnotice"><%= notice %></p>
 
 <p>
   <strong>Nome:</strong>
@@ -6,8 +6,19 @@
 </p>
 
 <p>
-  <strong>Endereço web Twitter:</strong>
+  <strong>Endereço web twitter:</strong>
   <%= @cadastro.url_twitter %>
+</p>
+
+<p>
+  <strong>Url encurtada:</strong>
+  <%= @cadastro.short_url %>
+</p>
+
+<p>
+  <b>User:</b> <%= @cadastro.twitter_user %><br>
+  <b>Descrition:</b> <%= @cadastro.twitter_description %><br>
+  <b>Title:</b> <%= @cadastro.twitter_title %><br>
 </p>
 
 <%= link_to 'Editar', edit_cadastro_path(@cadastro) %> |
