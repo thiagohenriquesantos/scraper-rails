@@ -1,5 +1,10 @@
 <body class="text-center">
-
+<div class="banner">
+  <div class="banner-content text-center">
+    <h1>&nbsp</h1>
+    <p>&nbsp</p>
+    </div>
+</div>
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
@@ -13,8 +18,8 @@
       </header>
 
       <main role="main" class="inner cover">
-        <h1 class="cover-heading">Desafio full-stack do Fretadão.</h1>
-        <p class="lead">Essa é uma página feita para solucionar o desafio do Fretadão.</p>
+        <h1 class="cover-heading">Desafio full-stack do Fretadão</h1>
+        <p class="lead">Essa é uma página feita para solucionar o desafio do Fretadão</p>
         <p class="lead">
           <a href="https://github.com/Fretadao/challenge/blob/master/fullstack/indexer/README.md" class="btn btn-lg btn-secondary">Veja o desafio</a>
         </p>
@@ -25,6 +30,7 @@
     </div>
 </body>
 <%= form_tag cadastros_path, method: :get do %>
+  <p>Busque aqui por nome, usuário ou descrição do twitter</p>
   <%= text_field_tag :q %>
-  <%= submit_tag 'Buscar' %>
+  <%= submit_tag 'Buscar', class: "btn btn-dark" %>
 <% end %>

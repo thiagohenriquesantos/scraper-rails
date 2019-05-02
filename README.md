@@ -1,24 +1,22 @@
-# README
+# Project Title
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Scraper rails, a project made to solve the challenge of fretadão.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+The project can be opened by heroku on the website: https://fretadao.herokuapp.com/ or the local server by doing the steps below.
 
-* System dependencies
+### Installing
 
-* Configuration
+You can open this project doing this things:
+git clone https://github.com/thiagohenriquesantos/scraper-rails.git
+cd scraper-rails
+run in terminal:
+                - rake db:migrate
+                - bundle
+                - rails s
+open browser in: "localhost:3000"
 
-* Database creation
+### Tools
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It was used in this project ruby, rails, active record, bootstrap, nokogiri to perform the scrapping, along with httparty and scaffold.

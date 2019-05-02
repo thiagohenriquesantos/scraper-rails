@@ -16,10 +16,10 @@
 </p>
 
 <p>
-  <b>Usuário:</b> <%= @cadastro.twitter_user %><br>
+  <b>Nome de usuário do Twitter:</b> <%= @cadastro.twitter_user %><br>
   <b>Descrição:</b> <%= @cadastro.twitter_description %><br>
   <b>Título:</b> <%= @cadastro.twitter_title %><br>
 </p>
 
-<%= link_to 'Editar', edit_cadastro_path(@cadastro) %> |
-<%= link_to 'Voltar', cadastros_path %>
+<%= link_to 'Editar', edit_cadastro_path(@cadastro), class: "btn btn-outline-warning" %> |
+<%= link_to 'Voltar', cadastros_path, class: 'btn btn-outline-secondary' %>
