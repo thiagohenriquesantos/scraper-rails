@@ -5,8 +5,8 @@ class CadastrosController < ApplicationController
   # GET /cadastros.json
   def index
     @cadastros = Cadastro.all
-    if params[:query].present?
-      @cadastros = @cadastros.where(url_twitter: params[:query])
+    if params[:q].present?
+      @cadastros = @cadastros.where("twitter_title LIKE ? or twitter_description LIKE ? or twitter_user LIKE ?", "%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%")
     end
   end
 

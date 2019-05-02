@@ -22,9 +22,9 @@
           <b>Nome de usuário do Twitter:</b> <%= cadastro.twitter_user %><br>
           <b>Descrição:</b> <%= cadastro.twitter_description %><br>
         </td>
-        <td><%= link_to 'Show', cadastro %></td>
-        <td><%= link_to 'Edit', edit_cadastro_path(cadastro) %></td>
-        <td><%= link_to 'Destroy', cadastro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', cadastro, class:"btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_cadastro_path(cadastro), class:"btn btn-secondary" %></td>
+        <td><%= link_to 'Destroy', cadastro, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>

@@ -56,21 +56,12 @@ GEM
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
-    autoprefixer-rails (9.5.1)
-      execjs
     bcrypt (3.1.12)
     bindex (0.7.0)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
-    bootstrap (4.1.3)
-      autoprefixer-rails (>= 6.0.3)
-      popper_js (>= 1.12.9, < 2)
-      sass (>= 3.5.2)
-    bootstrap-sass (3.4.1)
-      autoprefixer-rails (>= 5.2.1)
-      sassc (>= 2.0.0)
     builder (3.2.3)
     byebug (11.0.1)
     capybara (3.18.0)
@@ -193,7 +184,6 @@ GEM
     pg_search (2.1.4)
       activerecord (>= 4.2)
       activesupport (>= 4.2)
-    popper_js (1.14.5)
     public_suffix (3.0.3)
     puma (3.12.1)
     rack (2.0.7)
@@ -244,9 +234,6 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    sassc (2.0.1)
-      ffi (~> 1.9)
-      rake
     selenium-webdriver (3.142.0)
       childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
@@ -299,8 +286,6 @@ DEPENDENCIES
   better_errors!
   binding_of_caller
   bootsnap (>= 1.1.0)
-  bootstrap
-  bootstrap-sass
   byebug
   capybara (>= 2.15)
   chromedriver-helper

@@ -8,7 +8,16 @@ class Cadastro < ApplicationRecord
 
   def create_short_url
     return if self.short_url.present?
-    #self.short_url = Googl.shorten(self.url_twitter, "213.57.23.49", "google_api_key")
+
+    request = HTTParty.post('https://www.encurtador.com.br/url-encurtada.php', :body => {u: 'www.google.com.br'})
+    if (200..299).include?(request.code)
+      parsed_page = Nokogiri::HTML(request.body)
+      self.short_url = "http://#{parsed_page.css('#shortenurl').first["value"]}"
+    end
+
+    #request = HTTParty.post('https://www.encurtador.com.br/url-encurtada.php', :body => {u: "http://google.com.br"})
+    #parsed_page = Nokogiri::HTML(request.body)
+    #parsed_page.css('#shortenurl').first["value"]
   end
 
   def capture_twitter_metadata
@@ -22,5 +31,10 @@ class Cadastro < ApplicationRecord
       self.twitter_description = parsed_page.css('.ProfileHeaderCard-bio.u-dir').text
       self.twitter_user = parsed_page.css('.ProfileHeaderCard-screennameLink .username.u-dir').text
     end
+  end
+
+  def search
+    include PgSearch
+  multisearchable against: [:twitter_title, :twitter_description, :twitter_user]
   end
 end
