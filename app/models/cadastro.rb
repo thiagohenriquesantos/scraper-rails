@@ -9,10 +9,10 @@ class Cadastro < ApplicationRecord
   def create_short_url
     return if self.short_url.present?
 
-    request = HTTParty.post('https://www.encurtador.com.br/url-encurtada.php', :body => {u: 'www.google.com.br'})
+    request = HTTParty.post('https://www.encurtador.com.br/url-encurtada.php', :body => {u: self.url_twitter})
     if (200..299).include?(request.code)
       parsed_page = Nokogiri::HTML(request.body)
-      self.short_url = "http://#{parsed_page.css('#shortenurl').first["value"]}"
+      self.short_url = parsed_page.css('#shortenurl').first["value"]
     end
 
     #request = HTTParty.post('https://www.encurtador.com.br/url-encurtada.php', :body => {u: "http://google.com.br"})
@@ -33,8 +33,4 @@ class Cadastro < ApplicationRecord
     end
   end
 
-  def search
-    include PgSearch
-  multisearchable against: [:twitter_title, :twitter_description, :twitter_user]
-  end
 end
