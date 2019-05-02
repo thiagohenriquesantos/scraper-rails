@@ -1,9 +1,6 @@
 <%= link_to t(".new", default: "Cadastrar"), new_cadastro_path, class: "btn" %>
 <%= link_to t(".show", default: "Ver cadastros"), cadastros_path, class: "btn" %>
     <%= form_tag cadastros_path, method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Escolha um cadastro..."
-      %>
+      <%= text_field_tag :keyword %>
+      <%= submit_tag 'Search' %>
     <% end %>

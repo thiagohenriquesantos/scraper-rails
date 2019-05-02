@@ -13,9 +13,4 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap-variables";
-
-$body-bg: $black;
-$body-color: $white;
-
 @import "bootstrap";

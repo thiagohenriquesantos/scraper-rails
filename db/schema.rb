@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2019_05_01_223232) do
 
   create_table "cadastros", force: :cascade do |t|
     t.string "nome"
-    t.string "url_twitter"
+    t.text "url_twitter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "twitter_title"
