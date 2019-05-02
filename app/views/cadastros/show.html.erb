@@ -1,5 +1,5 @@
 <p id="Joinnotice"><%= notice %></p>
-
+<h1 class="mt-5">Cadastros:</h1>
 <p>
   <strong>Nome:</strong>
   <%= @cadastro.nome %>
@@ -16,9 +16,9 @@
 </p>
 
 <p>
-  <b>User:</b> <%= @cadastro.twitter_user %><br>
-  <b>Descrition:</b> <%= @cadastro.twitter_description %><br>
-  <b>Title:</b> <%= @cadastro.twitter_title %><br>
+  <b>Usuário:</b> <%= @cadastro.twitter_user %><br>
+  <b>Descrição:</b> <%= @cadastro.twitter_description %><br>
+  <b>Título:</b> <%= @cadastro.twitter_title %><br>
 </p>
 
 <%= link_to 'Editar', edit_cadastro_path(@cadastro) %> |

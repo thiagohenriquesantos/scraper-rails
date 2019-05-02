@@ -2,15 +2,15 @@
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <div class="form-post">
-        <p>Novo Cadastro<p>
+        <h1 class = "row">Novo Cadastro:</h1>
           <div class="row">
             <div class="col-xs-6">
               <%= render 'form', cadastro: @cadastro %>
                 </div>
-          <div class="col-xs-6">
-              <%= link_to 'Voltar', cadastros_path %>
-              </div>
+            <div class="col-xs-6">
+            </div>
         </div>
       </div>
     </div>
   </div>
+<%= link_to 'Voltar', cadastros_path %>
