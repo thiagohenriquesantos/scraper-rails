@@ -17,10 +17,11 @@
       <tr>
         <td><%= cadastro.nome %></td>
         <td><%= cadastro.short_url %></td>
-        <td style="width:300px">
+        <td style="width:550px">
           <b>Título:</b> <%= cadastro.twitter_title %><br>
-          <b>Nome de usuário do Twitter:</b> <%= cadastro.twitter_user %><br>
           <b>Descrição:</b> <%= cadastro.twitter_description %><br>
+          <b>Nome de usuário do Twitter:</b> <%= cadastro.twitter_user %><br>
+          <p></p>
         </td>
         <td><%= link_to 'Show', cadastro, class:"btn btn-primary" %></td>
         <td><%= link_to 'Edit', edit_cadastro_path(cadastro), class:"btn btn-secondary" %></td>
