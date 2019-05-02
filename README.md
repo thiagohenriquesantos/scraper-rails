@@ -1,6 +1,6 @@
-# Project Title
+# Scraper Rails
 
-Scraper rails, a project made to solve the challenge of fretadão.
+A project made to solve the challenge of fretadão.
 
 ## Getting Started
 
